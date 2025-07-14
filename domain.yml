@@ -1,0 +1,137 @@
+version: "3.1"
+
+intents:
+  - request_brand_and_collection
+  - request_brand_and_product
+  - request_product_name
+  - request_article_name
+  - request_size
+  - greet
+  - register
+  - fetch_one_product
+
+entities:
+  - product_name
+  - brand_name
+  - collection_name
+  - size
+  - article_name
+  - name
+  - number
+  - address
+  - email
+  - order
+
+slots:
+  product_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: product_name
+  brand_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: brand_name
+  collection_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: collection_name
+  article_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: article_name
+  size:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: size
+
+  name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: name
+
+  address:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: address
+
+  number:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: number
+
+  email:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: email
+
+  order:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: order
+
+  collection_info:
+    type: any
+    mappings:
+      - type: custom 
+  product_info:
+    type: any
+    mappings:
+      - type: custom 
+  article_info:
+    type: any
+    mappings:
+      - type: custom 
+  size_info:
+    type: any
+    mappings:
+      - type: custom 
+
+actions:
+  - action_fetch_brand_collection
+  - action_fetch_product_name
+  - action_fetch_article_name
+  - action_fetch_size
+  - action_register
+
+forms:
+  register_form:
+    required_slots:
+      - name
+      - address
+      - number
+      - email
+
+responses:
+  utter_greet:
+    - text: "Hi, Welcome to xyz, to search about articles availability, sale products and many more try writing (List some (brand name) sale products.)"
+    - text: "Hi"
+    - text: "Hello."
+    - text: "Hey"
+
+  utter_ask_name:
+    - text: "May I have your name, please?"
+
+  utter_ask_address:
+    - text: "Kindly enter your permanent address"
+
+  utter_ask_number:
+    - text: "What is your phone number?"
+
+  utter_ask_email:
+    - text: "What is your e-mail?"
+
+  utter_intent_seq:
+    - text: "You cannot ask for collection after product. Try search in order like: brand collection -> product -> article -> size"
+
+
+

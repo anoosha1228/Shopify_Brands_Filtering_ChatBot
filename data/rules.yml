@@ -1,0 +1,51 @@
+version: "3.1"
+
+rules:
+  - rule: Say hi anytime the user says hi
+    steps:
+    - intent: greet
+    - action: utter_greet
+
+  - rule: Activate register form
+    steps:
+      - intent: register
+      - action: register_form
+      - active_loop: register_form
+
+  - rule: Submit register form
+    condition:
+      - active_loop: register_form
+    steps:
+      - action: register_form
+      - active_loop: null
+      - action: action_register
+      - action: action_restart
+
+  - rule: fetch brand and collection data
+    steps:
+    - intent: request_brand_and_collection
+    - action: action_fetch_brand_collection
+    - slot_was_set:
+      - brand_name: "beechtree"
+      - collection_name: "sale"
+
+  - rule: fetch product data
+    steps:
+    - intent: request_product_name
+    - action: action_fetch_product_name
+    - slot_was_set:
+      - product_name: "pret"
+
+  - rule: fetch article data
+    steps:
+    - intent: request_article_name
+    - action: action_fetch_article_name
+    - slot_was_set:
+      - article_name: "lawn"
+
+  - rule: fetch size data
+    steps:
+    - intent: request_size
+    - action: action_fetch_size
+    - slot_was_set:
+      - size: "2pc"

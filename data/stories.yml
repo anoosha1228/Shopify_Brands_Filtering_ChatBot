@@ -1,0 +1,159 @@
+# version: "3.1"
+
+# # stories:
+# # - story: all info at once story
+# #   steps:
+# #   - intent: request_info
+# #   - action: action_fetch_all_data
+# #   - slot_was_set:
+# #     - product_name: "pret"
+
+# stories:
+
+# - story: all steps story 1 (product) 1
+#   steps:
+#   - intent: request_brand_and_collection
+#   - slot_was_set:
+#     - brand_name: "beechtree"
+#     - collection_name: "sale"
+#   - action: action_fetch_brand_collection
+
+#   - intent: request_product_name
+#   - slot_was_set:
+#     - product_name: "pret"
+#   - action: action_fetch_product_name
+
+#   - intent: request_article_name
+#   - slot_was_set:
+#     - article_name: "lawn"
+#   - action: action_fetch_article_name
+  
+#   - intent: request_size
+#   - slot_was_set:
+#     - size: "2pc"
+#   - action: action_fetch_size
+
+# - story: all steps story 1 (product) 2
+#   steps:
+#   - intent: request_brand_and_collection
+#   - slot_was_set:
+#     - brand_name: "beechtree"
+#     - collection_name: "sale"
+#   - action: action_fetch_brand_collection
+
+#   - intent: request_product_name
+#   - slot_was_set:
+#     - product_name: "pret"
+#   - action: action_fetch_product_name
+
+#   - intent: request_size
+#   - slot_was_set:
+#     - size: "2pc"
+#   - action: action_fetch_size
+
+#   - intent: request_article_name
+#   - slot_was_set:
+#     - article_name: "lawn"
+#   - action: action_fetch_article_name
+  
+# - story: all steps story 2 (article) 1
+#   steps:
+#   - intent: request_brand_and_collection
+#   - action: action_fetch_brand_collection
+#   - slot_was_set:
+#     - brand_name: "beechtree"
+#     - collection_name: "sale"
+
+#   - intent: request_article_name
+#   - action: action_fetch_article_name
+#   - slot_was_set:
+#     - article_name: "lawn"
+
+#   - intent: request_product_name
+#   - action: action_fetch_product_name
+#   - slot_was_set:
+#     - product_name: "pret"
+  
+#   - intent: request_size
+#   - slot_was_set:
+#     - size: "2pc"
+#   - action: action_fetch_size
+
+# - story: all steps story 2 (article) 2
+#   steps:
+#   - intent: request_brand_and_collection
+#   - action: action_fetch_brand_collection
+#   - slot_was_set:
+#     - brand_name: "beechtree"
+#     - collection_name: "sale"
+
+#   - intent: request_article_name
+#   - action: action_fetch_article_name
+#   - slot_was_set:
+#     - article_name: "lawn"
+  
+#   - intent: request_size
+#   - slot_was_set:
+#     - size: "2pc"
+#   - action: action_fetch_size
+
+#   - intent: request_product_name
+#   - action: action_fetch_product_name
+#   - slot_was_set:
+#     - product_name: "pret"
+
+# - story: all steps story 3 (size) 1
+#   steps:
+#   - intent: request_brand_and_collection
+#   - action: action_fetch_brand_collection
+#   - slot_was_set:
+#     - brand_name: "beechtree"
+#     - collection_name: "sale"
+
+#   - intent: request_size
+#   - slot_was_set:
+#     - size: "2pc"
+#   - action: action_fetch_size
+
+#   - intent: request_article_name
+#   - action: action_fetch_article_name
+#   - slot_was_set:
+#     - article_name: "lawn"
+
+#   - intent: request_product_name
+#   - action: action_fetch_product_name
+#   - slot_was_set:
+#     - product_name: "pret"
+  
+# - story: all steps story 3 (size) 2
+#   steps:
+#   - intent: request_brand_and_collection
+#   - action: action_fetch_brand_collection
+#   - slot_was_set:
+#     - brand_name: "beechtree"
+#     - collection_name: "sale"
+
+#   - intent: request_size
+#   - slot_was_set:
+#     - size: "2pc"
+#   - action: action_fetch_size
+
+#   - intent: request_product_name
+#   - action: action_fetch_product_name
+#   - slot_was_set:
+#     - product_name: "pret"
+
+#   - intent: request_article_name
+#   - action: action_fetch_article_name
+#   - slot_was_set:
+#     - article_name: "lawn"
+
+# - story: wrong path 1
+#   steps:
+#   - intent: request_product_name
+#   - action: action_fetch_product_name
+#   - slot_was_set:
+#     - brand_name: "beechtree"
+#     - product_name: "pret"
+#   - intent: request_brand_and_collection
+#   - action: utter_intent_seq

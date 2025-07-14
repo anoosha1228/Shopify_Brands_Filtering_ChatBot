@@ -1,0 +1,121 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: request_brand_and_collection
+  examples: |
+    - List some latest [asim jofa](brand_name) [sale](collection_name) collection
+    - Tell me about [outfitters](brand_name) [new arrival](collection_name) collection
+    - What can you tell me about [beechtree](brand_name) [sale](collection_name)?
+    - List some latest [Khaadi](brand_name) [summer](collection_name) dresses.
+    - Show me [Ndure](brand_name) [winter](collection_name) collection.
+    - Find the newest [Nishat](brand_name) [bridal](collection_name) dresses.
+
+- intent: request_product_name
+  examples: |
+    - Display the [unstitch](product_name) designs.
+    - Give me [stitched](product_name) products.
+    - What can you tell me about [ready to wear](product_name) designs?
+    - List some latest [asim jofa](brand_name) [unstitch](product_name) collection
+    - Tell me about [outfitters](brand_name) [stitched](product_name) collection
+    - What can you tell me about [beechtree](brand_name) [ready to wear](product_name)?
+    - List some latest [Khaadi](brand_name) [pret](product_name) dresses.
+
+- intent: request_article_name
+  examples: |
+    - Display the recent [printed](article_name) designs.
+    - Give me recent [Beechtree](brand_name) [silk](article_name).
+    - Tell me about [outfitters](brand_name) [socks](article_name)
+    - What can you tell me about [Beechtree](brand_name) [pant](article_name)?
+    - Display the recent [alkaram](brand_name) [kurta](article_name) designs.
+    - Give me recent [beechtree](brand_name) [shoes](article_name).
+    - Tell me about [outfitters](brand_name) [socks](article_name)
+
+- intent: request_size
+  examples: |
+    - filter this record where size is [36](size)
+    - filter where size is [37](size)
+    - filter where size is [3pc](size)
+
+- intent: fetch_one_product
+  examples: |
+    - show [first](order) record
+
+- intent: register
+  examples: |
+    - I want to add the products to the cart
+    - Add to cart
+    - My name is [John Doe](name)
+    - My number is [1234567890](number)
+    - I live at [123 Main Street](address)
+    - My address is [123 Main Street, Anytown(address)]
+    - You can reach me at [9876543210](number)
+    - My full name is [Jane Smith](name)
+    - My phone number is [0987654321](number)
+    - I reside at [456 Elm Street](address)
+    - The delivery address is [789 Pine Avenue](address)
+    - Here are my details: [John Doe](name), [123 Elm St](address), [5551234567](number), [john.doe@example.com](email)
+    - My email is [unstitch](email)
+    - You can email me at [jane.smith@example.org](email)
+
+- lookup: brand_name
+  examples: |
+    - asim jofa
+    - outfitters
+    - beechtree
+    - orient
+    - limelight
+    - nishat
+    - ndure
+    - alkaram
+
+- lookup: product_name
+  examples: |
+    - unstitch
+    - unstitched
+    - stitched
+    - ready to wear
+    - pret
+
+- lookup: collection_name
+  examples: |
+    - bridal
+    - winter
+    - summer
+    - sale
+    - new arrival
+
+- lookup: article_name
+  examples: |
+    - pant
+    - printed
+    - silk
+    - kurta
+    - shoes
+    - socks
+
+- lookup: size
+  examples: |
+    - 36
+    - 37
+    - 39
+    - 2pc
+    - xs
+    - l
+    - x
+    - 3pc
