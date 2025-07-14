@@ -49,7 +49,7 @@ This project is a chatbot developed using **Rasa** in a **virtual environment**.
 
 ---
 
-## 🧰 Tech Stack
+## 🛠️ Scrapper Source
 
 - **Apify Shopify Scraper** (https://apify.com/pocesar/shopify-scraper)
 
